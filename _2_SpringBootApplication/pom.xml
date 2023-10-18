@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.1.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>_2_SpringBootApplication</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>_2_SpringBootApplication</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>21</java.version>
+	</properties>
+
+	<!--THESE ARE YOUR PROJECT DEPENDENCIES-->
+	<dependencies>
+
+		<!--This is a SUPER dependency. This one dependency "spring-boot-starter-web" has a good dozen other dependencies in it, such as...
+			    1. spring-web
+			    2. spring-web-mvc
+			    3. hibernate-validator
+			    4. json
+			    5. tomcat
+			    AND MANY, MANY MORE. THIS IS THE ONE SHOP STOP FOR DEPENDENCIES.
+		-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<!--THESE ARE YOUR PROJECT PLUGINS-->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

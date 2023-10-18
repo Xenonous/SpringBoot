@@ -18,6 +18,6 @@ public class MyRestController {
 
     @GetMapping("/secret")
     public String getSecretMessage() {
-        return "Congrats, you found the secret endpoint!";
+        return "Congrats, you found the secret endpoint!!";
     }
 }

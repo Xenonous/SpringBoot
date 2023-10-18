@@ -31,10 +31,16 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--MANUALLY ADDED DEPENDENCY FOR "spring-boot-devtools"-->
+		<!--MANUALLY ADDING DEPENDENCY FOR "spring-boot-devtools"-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
+		<!--MANUALLY ADDING DEPENDENCY FOR "spring-boot-actuator-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
 	</dependencies>

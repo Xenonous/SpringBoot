@@ -37,10 +37,17 @@
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 
-		<!--MANUALLY ADDING DEPENDENCY FOR "spring-boot-actuator-->
+		<!--MANUALLY ADDING DEPENDENCY FOR "spring-boot-actuator"-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!--MANUALLY ADDING DEPENDCY FOR "spring-boot-security"-->
+		<!--This allows us to secure our endpoints/actuators so their information isn't available to everyone.-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
 	</dependencies>

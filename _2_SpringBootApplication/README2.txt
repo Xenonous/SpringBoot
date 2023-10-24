@@ -55,3 +55,5 @@ Finally, we have our "src/main/resources" directory. This is home to the "applic
         -Image files, etc.
 
     And lastly, the resource directory also includes the "templates" directory, which we will go over at a later time.
+
+-----END OF SECTION-----

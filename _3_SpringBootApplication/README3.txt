@@ -58,3 +58,37 @@ Just like with the previous functionality, we need to add this one via a depende
         -"/mappings" Lists all "@RequestMappings" paths.
 
         MANY MORE. SEE (https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html) for the full list.
+
+------------------------------------------------------------
+Now that we have seen actuators in use and their purpose, we need to add security to them. As it stands right now, anyone can access and use them.
+Having everyone be able to access actuators is quite a big risk. Some actuators reveal sensitive information about the web application, etc.
+So the question is, how can we secure these endpoints? It's actually quite easy, all we need to do is add the "spring-boot-starter-security" dependency.
+    -The following is the dependency needed to add security to our endpoints and actuators in our web application...
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+    -Now with this added, only those with the correct username and password will be able to view actuator information.
+        -NOTE: THERES ONLY ONE ACTUATOR THAT DOESN'T REQUIRE A LOGIN AND IT'S THE HEALTH ACTUATOR.
+    -The username and password can be found as follows...
+        USERNAME: is always "user"
+        PASSWORD: can be found in the console when the application is running with the security dependency added.
+
+    -Additionally, you can override the default username and password by specifying such in the "application.properties" file, per usual.
+    -The code would look something like this...
+        "spring.security.user.name = Chad"
+        "spring.security.user.password = 9877899"
+            AND/OR
+        "spring.security.user2.name = admin"
+        "spring.security.user2.name = admin"
+
+    -Finally, if you wanted to exclude certain endpoints/actuators from having security, you can use the following code in the "application.properties" file...
+        "management.endpoints.web.exposure.exclude = health.info", remember, health is by default excluded, so we're only really adding info to the exclusion list.
+
+    -NOTE: You don't NEED to use the "application.properties" file to manage USERNAME/PASSWORD combinations, you can also use databases, encrypted passwords, etc.
+        -This will be covered later in the course during the spring boot security module.
+
+
+-----END OF SECTION-----
